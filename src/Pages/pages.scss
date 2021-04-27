@@ -1,0 +1,130 @@
+.profile_bg {
+    background-image: url(../Images/bgFooterBlur.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 88vh;
+    max-height: 100%;
+    .row div{
+        padding: 3rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .profile_hero{
+        display: none;
+    }
+}
+
+.profile_dp {
+    height: 10rem;
+    width: 10rem;
+    margin-bottom: 1rem;
+}
+
+.profile_hero {
+    width: 100%;
+}
+
+.profile_content {
+    text-align: justify;
+}
+
+
+
+
+
+
+// NEW REPO
+.newrepo_bg{
+    background-image: url(../Images/bgNoCircle.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 88vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .newrepo_topicInfo {
+        display: flex;
+    }
+}
+
+
+
+// MY REPO
+.myrepo_bg{
+    background-image: url(../Images/bgMyRepo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 88vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// SEARCH REPO
+.searchrepo_bg{
+    background-image: url(../Images/bgSearchRepo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 88vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+// AUTH
+
+.auth_bg {
+    background-image: url(../Images/bgFooterBlur.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 88vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.head {
+    color: #0381ff;
+    margin-left: 42%;
+}
+
+.authSvg {
+    width: 100%;
+}
+
+.authBtn {    
+    margin-top: 2rem;
+    margin-left:35% !important;
+}
+
+@media (max-width: 992px) {
+    .login_form{
+        padding-top: 1rem !important;
+    }
+    .authSvg {
+        width: 70%;
+    }
+}

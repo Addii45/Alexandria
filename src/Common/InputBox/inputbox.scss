@@ -1,0 +1,21 @@
+.inputbox_wrapper {
+    margin-bottom: 0.2rem;
+}
+
+.inputbox_label {
+    width: 40%;
+    text-align: right;
+    margin-right: 10px;
+    color: #0381ff;
+}
+
+.inputbox_input {
+    border: 1px solid #bac7d4;
+    width: 40%;
+    background-color: #dee9f5;
+    color: #666;
+    font-weight: 400;
+    &:focus{
+        outline: none;
+    }
+}

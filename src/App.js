@@ -1,24 +1,24 @@
-import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {HashRouter, Switch, Route, Redirect} from 'react-router-dom'
 import './App.css'
-import {Profile, NewRepo, MyRepo, SearchRepo} from './Pages'
+import {Profile, NewRepo, MyRepo, SearchRepo, SignUp, SignIn} from './Pages'
 import {Footer, Navbar} from './Components'
 
 function App() {
   return (
     <HashRouter>
-      <div className="App">
         <Navbar/>
         <Switch>
-          <Redirect from='/' to='/myprofile' exact/>
+          <Redirect from='/' to='/signup' exact/>
+          <Route exact path='/signin' component={SignIn} />
+          <Route exact path='/signup' component={SignUp} />
           <Route exact path='/myprofile' component={Profile} />
           <Route exact path='/newRepo' component={NewRepo} />
           <Route exact path='/myRepos' component={MyRepo}/>
           <Route exact path='/searchRepos' component={SearchRepo}/>
         </Switch>
         <Footer/>
-      </div>
     </HashRouter>
-  );
+  )
 }
 
-export default App;
+export default App
