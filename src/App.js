@@ -6,19 +6,23 @@ import {Footer, Navbar} from './Components'
 function App() {
   return (
     <HashRouter>
-        <Navbar/>
-        <Switch>
-          <Redirect from='/' to='/signup' exact/>
+        <Switch>        
           <Route exact path='/signin' component={SignIn} />
-          <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/signup' component={SignUp} />   
+          <>
+          <Navbar/>
           <Route exact path='/myprofile' component={Profile} />
           <Route exact path='/newRepo' component={NewRepo} />
           <Route exact path='/myRepos' component={MyRepo}/>
           <Route exact path='/searchRepos' component={SearchRepo}/>
+          <Footer/>
+          </>
         </Switch>
-        <Footer/>
     </HashRouter>
   )
 }
 
 export default App
+
+
+// <Redirect from='/' to='/signup' exact/>

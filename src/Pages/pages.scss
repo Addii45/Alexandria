@@ -103,28 +103,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
+    .authSvg {
+        width: 100%;
+    }
 
-.head {
-    color: #0381ff;
-    margin-left: 42%;
-}
-
-.authSvg {
-    width: 100%;
-}
-
-.authBtn {    
-    margin-top: 2rem;
-    margin-left:35% !important;
+    .login_form{
+        text-align: left;
+        padding-left: 5rem;
+    }
 }
 
 @media (max-width: 992px) {
-    .login_form{
-        padding-top: 1rem !important;
-    }
     .authSvg {
-        width: 70%;
+        display: none;
     }
+    .login_form{
+        padding: 0rem;
+    }
+}
+
+
+
+
+#file-input {
+    display: none;
 }
