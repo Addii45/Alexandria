@@ -32,14 +32,14 @@ const SignUp = () => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [college, setCollege] = useState('')
     const [desc, setDesc] = useState('')
 
     const handleSubmit = () => {
-        console.log(username, email, password, desc)
-        const userData = { username, email, password, desc }
+        console.log(username, email, password, college, desc)
+        const userData = { username, email, password, collegeName:college, desc }
         axios.post('users', userData)
         .then(res => {
-            localStorage.setItem('token', res.data.token)
             console.log(res)
             history.push('/signin')
         })
@@ -56,6 +56,7 @@ const SignUp = () => {
                         <TextField onChange={e => setUsername(e.target.value)} className={classes.textfield} id="username" label="Username ..." variant="outlined" />
                         <TextField onChange={e => setEmail(e.target.value)} className={classes.textfield} type="email" id="email" label="Email ..." variant="outlined" />
                         <TextField onChange={e => setPassword(e.target.value)} className={classes.textfield} type="password" id="password" label="Password ..." variant="outlined" />
+                        <TextField onChange={e => setCollege(e.target.value)} className={classes.textfield} id="college" label="College Name ..." variant="outlined" />
                         <TextField onChange={e => setDesc(e.target.value)} className={classes.textfield} multiline id="desc" label="Tell something about yourself ..." variant="outlined" />
                         <Button onClick={handleSubmit} className={classes.buttonStyle} variant='contained' color='primary' type="button">SUBMIT</Button>
                     </div>

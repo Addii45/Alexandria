@@ -129,3 +129,28 @@
 #file-input {
     display: none;
 }
+
+
+.crudIcon {
+    height: 1.5rem;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+// FINAL REPO
+.finalrepo_bg{
+    background-image: url(../Images/bgBlur.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 88vh;
+    max-height: 100%;
+    text-align: left;
+    
+    .finalrepo_container {
+        padding-top: 10rem;
+    }
+}
