@@ -19,6 +19,12 @@ const useStyles = makeStyles({
     },
     btn: {
         margin:10
+    },
+    bgBlur: {
+        width:'80%',
+        marginTop:20,
+        borderRadius:'10px',
+        backdropFilter:'blur(5px)',
     }
 })
 
@@ -126,8 +132,8 @@ const NewRepo = () => {
 
     return (
         <form className='newrepo_bg' autoComplete="off">
-            <TextField onChange={e => onChangeCourse(e)} className={classes.widthMax} id="course-name" label="Course Name ..." variant="outlined" />
-            <TextField onChange={e => onChangeCourseDesc(e)} className={classes.widthMax} multiline id="course-desc" label="Course Description ..." variant="outlined" />
+            <TextField onChange={e => onChangeCourse(e)} className={classes.bgBlur} id="course-name" label="Course Name ..." variant="outlined" />
+            <TextField onChange={e => onChangeCourseDesc(e)} className={classes.bgBlur} multiline id="course-desc" label="Course Description ..." variant="outlined" />
 
 
             <Card className={classes.widthMax}>

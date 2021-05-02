@@ -8,6 +8,7 @@ import './pages.scss'
 const Profile = () => {
 
     const [profileInfo, setProfileInfo] = useState({})
+    const [profilePicVar, setProfilePicVar] = useState(ProfilePic)
 
 
 
@@ -17,9 +18,10 @@ const Profile = () => {
         axios.get('users/myprofile')
         .then(res => {
             setProfileInfo(res.data)
+            setProfilePicVar(`data:image/jpeg;base64,${res.data.profile_photo}`)
             console.log(res.data)
         })
-    }, [setProfileInfo])
+    }, [setProfileInfo,setProfilePicVar])
 
 
 
@@ -43,7 +45,7 @@ const Profile = () => {
             <div className='container'>
                 <div className='row' style={{height:'88vh'}}>
                     <div className='col-md-12 col-lg-6 my-auto'>
-                        <label htmlFor="file-input"><img className='profile_dp' src={`data:image/jpeg;base64,${profileInfo.profile_photo}` || ProfilePic} alt='profile pic' /></label>
+                        <label htmlFor="file-input"><img className='profile_dp' src={profilePicVar} alt='profile pic' /></label>
                         <input onChange={(e) => onImgClick(e)} id="file-input" type="file" />
                         <h2>{profileInfo.username}</h2>
                         <h4>{profileInfo.collegeName}</h4>

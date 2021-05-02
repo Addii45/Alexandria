@@ -1,6 +1,6 @@
 {
   "name": "odin",
-  "homepage": "http://tanishabisht.github.io/CaffeineOverflow-ODIN",
+  "homepage": "http://tanishabisht.github.io/Alexandria",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,9 +15,12 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
+    "react-material-ui-form-validator": "^2.1.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.2",
+    "react-toastify": "^7.0.4",
+    "reactjs-toastr": "^1.1.0",
     "styled-components": "^5.2.3",
     "web-vitals": "^1.1.1"
   },
