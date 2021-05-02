@@ -1,8 +1,10 @@
-import './pages.scss'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles'
 import {RepoCard} from '../Components'
 import {TextField} from '@material-ui/core'
 import Autocomplete from '@material-ui/lab/Autocomplete'
+import './pages.scss'
 
 
 const useStyles = makeStyles({
@@ -17,17 +19,39 @@ const useStyles = makeStyles({
 const SearchRepo = () => {
 
     const classes = useStyles()
+
+    const [url, setUrl] = useState('repos')
+    const [searchRepoContent, setSearchRepoContent] = useState([])
+    
+    useEffect(() => {
+        console.log('INSIDE USE EFFECT')
+        axios.get(url)
+        .then((res)=> setSearchRepoContent(res.data))
+        .catch((err) => console.log(err))
+    }, [url,setSearchRepoContent])
+
+
+
+
     
 
-    var searchRepoContent = [
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
-        {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}}
-    ]
+
+    // STACK SEARCH BAR : BASED ON STACKS
+
+    const tags = ['', 'tag1', 'tag2']
+
+    const onTagChangeURL = (inpVal) => {
+        console.log(inpVal)
+        setUrl(`getrepoBytags/${inpVal}`)
+    }
+
+    const [tag, setTag] = useState(tags[0])
+    const extractTagInpVal = (e, newVal) => {
+        setTag(newVal)
+        onTagChangeURL(newVal)
+    }
+
+
 
 
     return (
@@ -42,12 +66,13 @@ const SearchRepo = () => {
 
                         <Autocomplete
                             className={classes.searchBox}
-                            options={searchRepoContent}
-                            getOptionLabel={(option) => option.repo.courseName}
+                            options={tags}
+                            getOptionLabel={(option) => option}
                             renderInput={(params) => <TextField {...params} label="Search ..." variant="outlined" />}
-                        />
+                            value={tag}
+                            onChange={(e,newVal) => extractTagInpVal(e,newVal)} />
 
-                        {searchRepoContent.map(({repo}) => <RepoCard heading={repo.courseName} para={repo.courseDesc} />)}                        
+                        {searchRepoContent.map(({courseName,courseDesc}, repo_id) => <RepoCard key={repo_id} heading={courseName} para={courseDesc} />)}
                     </div>
                 </div>
 
@@ -57,3 +82,20 @@ const SearchRepo = () => {
 }
 
 export default SearchRepo
+
+
+
+
+
+
+    
+
+    // var searchRepoContent = [
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}},
+    //     {success:true, repo:{id:0, courseName:'Advanced Programming Practice', courseDesc:'Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description, Some random description'}}
+    // ]
