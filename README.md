@@ -38,9 +38,7 @@ Users can connect their wallets and transfer BB Tokens from their account to ano
 
 <img width="1440" alt="Screenshot 2021-05-06 at 3 33 40 AM" src="https://user-images.githubusercontent.com/52802268/117216450-67947800-ae1d-11eb-974e-38631a46dfe8.png">
 
-
-</br>
-Here are some sample screenshots of BigBrain tokens that are being minted and sent to a test account.</br> 
+Here are some sample screenshots of BigBrain tokens that are being minted and sent to a test account. </br>
 **The 'Mint BB Tokens' option only appears when the administrator is making a transaction**
 
 <img width="1440" alt="Screenshot 2021-05-06 at 3 34 44 AM" src="https://user-images.githubusercontent.com/52802268/117216059-ce656180-ae1c-11eb-8c41-e8cc7058558a.png">
@@ -48,14 +46,12 @@ Here are some sample screenshots of BigBrain tokens that are being minted and se
 <img width="1440" alt="Screenshot 2021-05-06 at 3 35 18 AM" src="https://user-images.githubusercontent.com/52802268/117216149-efc64d80-ae1c-11eb-9a0e-d67d0d54e51d.png">
 
 </br>
+
 Next, here are some sample screenshots of a user transfering BigBrain tokens from his wallet to another account.
 
 <img width="1440" alt="Screenshot 2021-05-06 at 3 36 03 AM" src="https://user-images.githubusercontent.com/52802268/117216328-30be6200-ae1d-11eb-8556-9aa14a276144.png">
 
 <img width="1440" alt="Screenshot 2021-05-06 at 3 36 54 AM" src="https://user-images.githubusercontent.com/52802268/117216350-3d42ba80-ae1d-11eb-903a-431b502c8ae8.png">
-</br></br>
-
-
 
 ## Team Mates
 [`Tanisha`](https://github.com/tanishabisht)  [`Arjun`](https://github.com/elgeneriko)  [`Adithya`](https://github.com/Addii45)  [`Prakhar`](https://github.com/PrSi007)
