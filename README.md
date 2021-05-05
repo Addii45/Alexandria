@@ -27,12 +27,33 @@ To incentivise students to make repos, we introduced the concept of **BigBrain T
 We as administrators can mint new tokens when necessary and send them to owners of the most upvoted repositories. Users can connect to their Temple Wallet accounts to receive these tokens and then can choose to send tokens to other owners of repositories they like. 
 This way, there is a legitimate incentive for students to contribute and share knowledge and this creates a healthy atmosphere of learning on our platform. 
 
+
+### Alexandria Blockchain App
+
 SmartContract Address: `KT1SK9k1Ei7GqacRzRXuWfJqxkTz2mVGnX9w`
 
-You can view the contract at `https://smartpy.io/explorer.html?address=KT1SK9k1Ei7GqacRzRXuWfJqxkTz2mVGnX9w`
+You can view and interact with the contract at `https://smartpy.io/explorer.html?address=KT1SK9k1Ei7GqacRzRXuWfJqxkTz2mVGnX9w`
 
-Sample Screenshot of BigBrain tokens that have been minted and sent to a test account: (https://user-images.githubusercontent.com/52802268/116870267-dca25a80-ac2f-11eb-8c60-dcad416b3f5f.png)
+Users can connect their wallets and transfer BB Tokens from their account to another account.
 
+<img width="1440" alt="Screenshot 2021-05-06 at 3 33 40 AM" src="https://user-images.githubusercontent.com/52802268/117216450-67947800-ae1d-11eb-974e-38631a46dfe8.png">
+
+
+</br>
+Here are some sample screenshots of BigBrain tokens that are being minted and sent to a test account.</br> 
+**The 'Mint BB Tokens' option only appears when the administrator is making a transaction**
+
+<img width="1440" alt="Screenshot 2021-05-06 at 3 34 44 AM" src="https://user-images.githubusercontent.com/52802268/117216059-ce656180-ae1c-11eb-8c41-e8cc7058558a.png">
+
+<img width="1440" alt="Screenshot 2021-05-06 at 3 35 18 AM" src="https://user-images.githubusercontent.com/52802268/117216149-efc64d80-ae1c-11eb-9a0e-d67d0d54e51d.png">
+
+</br>
+Next, here are some sample screenshots of a user transfering BigBrain tokens from his wallet to another account.
+
+<img width="1440" alt="Screenshot 2021-05-06 at 3 36 03 AM" src="https://user-images.githubusercontent.com/52802268/117216328-30be6200-ae1d-11eb-8556-9aa14a276144.png">
+
+<img width="1440" alt="Screenshot 2021-05-06 at 3 36 54 AM" src="https://user-images.githubusercontent.com/52802268/117216350-3d42ba80-ae1d-11eb-903a-431b502c8ae8.png">
+</br></br>
 
 
 
